@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1300px;
+  background-color: #fafafa;
+  font-family: "Rubik", sans-serif;
+}
+
+.menu-btn {
+  margin: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 2.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  color: #a56cc1;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.menu-btn__burguer {
+  width: 40px;
+  height: 4px;
+  background: #a56cc1;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+  margin: 0.2rem;
+}
+
+.menu-btn__burguer::before,
+.menu-btn__burguer::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: #a56cc1;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burguer::before {
+  transform: translateY(-14px);
+}
+
+.menu-btn__burguer::after {
+  transform: translateY(14px);
+}
+
+.menu-btn.open .menu-btn__burguer {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burguer::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burguer::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+header img {
+  width: 3rem;
+  margin-right: 2.5rem;
+}
+
+.aside {
+  width: 100%;
+  background-color: #fafafa;
+  display: none;
+  transition: all 0.5s ease-in-out;
+  margin: 0.5rem;
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+}
+
+.aside-items {
+  list-style: none;
+  font-size: 1.5rem;
+}
+.aside-items i {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.item {
+  height: 5rem;
+  padding-top: 1.5rem;
+  border-bottom: 3px solid #a6acec;
+}
+.item a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.open {
+  display: block;
+}
+
+main {
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+}
+main h1,
+main p {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+main button {
+  margin: 0.5rem;
+  width: 8rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  font-family: inherit;
+  border-radius: 5px;
+  background-color: #cefff1;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  color: black;
+  box-shadow: 5px 5px 5px rgba(17, 17, 17, 0.3);
+  border: 3px solid #ace7ef;
+}
+
+.actividad {
+  margin-top: 3rem;
+}
+.actividad ul {
+  list-style: none;
+}
+.actividad .actividad-items {
+  margin-left: 0.5rem;
+  text-align: left;
+  margin-top: 1.5rem;
+}
+.actividad .actividad-item {
+  width: 95%;
+  height: 3rem;
+  border-bottom: 3px solid #a6acec;
+  padding-top: 1.2rem;
+  font-size: 0.8rem;
+}
+.actividad .fa-arrow-circle-right {
+  color: red;
+  font-size: 1rem;
+}
+.actividad .fa-arrow-circle-left {
+  color: green;
+  font-size: 1rem;
+}
+.actividad a {
+  text-decoration: none;
+  color: lightgray;
+}
+.actividad .fa-info-circle {
+  color: lightgray;
+  font-size: 0.9rem;
+}
+.actividad button {
+  margin: 1rem;
+  width: 7rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  font-family: inherit;
+  border-radius: 5px;
+  background-color: #a6acec;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  color: black;
+  box-shadow: 5px 5px 5px rgba(17, 17, 17, 0.3);
+  border: 3px solid #a56cc1;
+}
+
+.graphic {
+  text-align: center;
+}
+.graphic canvas {
+  width: 60%;
+}
+
+@media (min-width: 600px) {
+  .aside {
+    width: 30%;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  main .tu-plata {
+    padding-top: 7rem;
+    width: 40%;
+    height: 400px;
+    box-shadow: 5px 5px 5px rgba(17, 17, 17, 0.3);
+    border-radius: 15px;
+  }
+  main .actividad {
+    margin-top: 0;
+    width: 40%;
+    height: 400px;
+    box-shadow: 5px 5px 5px rgba(17, 17, 17, 0.3);
+    border-radius: 15px;
+  }
+  main .actividad button {
+    margin-top: 2rem;
+  }
+
+  .graphic {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

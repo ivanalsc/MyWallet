@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWallet</title>
+    <link rel="shortcut icon" href="assets/images/wallet -black.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/main.css">
+    <script src="assets/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+        integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3bfbeccced.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="menu-btn">
+            <div class="menu-btn__burguer"></div>
+        </div>
+        <img src='assets/images/wallet.svg' alt='' />
+    </header>
+    <aside class='aside'>
+        <ul class='aside-items'>
+            <li class='item'><i class="fas fa-hand-holding-usd"></i><a href='#'>Mi plata</a></li>
+            <li class='item'><i class="fas fa-piggy-bank"></i><a href='#'>Ahorros</a></li>
+            <li class='item'><i class="fas fa-money-bill-wave"></i><a href='#'>Gastos</a></li>
+        </ul>
+    </aside>
+    <main>
+        <section class="tu-plata">
+            <h1>Plata disponible: </h1>
+            <p>$1500</p>
+            <button class="ingresar">Ingresar plata</button>
+            <button class="Retirar">Retirar plata</button>
+        </section>
+        <section class="actividad">
+            <h2>Actividad reciente:</h2>
+            <ul class='actividad-items'>
+                <li class='actividad-item'><i class="fas fa-arrow-circle-right"></i> Pagaste $1200 en MercadoPago
+                    <a href="#"><i class="fas fa-info-circle"></i></a>
+                </li>
+                <li class='actividad-item'><i class="fas fa-arrow-circle-left"></i> Ingresaste $500 con Ualá
+                    <a href="#"><i class="fas fa-info-circle"></i></a>
+                </li>
+                <li class='actividad-item'><i class="fas fa-arrow-circle-right"></i> Pagaste $500 en TiendaNube
+                    <a href="#"><i class="fas fa-info-circle"></i></a>
+                </li>
+                <li class='actividad-item'><i class="fas fa-arrow-circle-right"></i> Pagaste $100 en MercadoPago
+                    <a href="#"><i class="fas fa-info-circle"></i></a>
+                </li>
+                <li class='actividad-item'><i class="fas fa-arrow-circle-left"></i> Ingresaste $2000 con Ualá
+                    <a href="#"><i class="fas fa-info-circle"></i></a>
+                </li>
+            </ul>
+            <button class="historial">Ver historial</button>
+
+        </section>
+    </main>
+    <section class="graphic">
+        <canvas id="myChart" width='40' height='40'></canvas>
+
+    </section>
+
+
+
+</body>
+
+</html>
